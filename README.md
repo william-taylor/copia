@@ -1,11 +1,20 @@
 
+# Copia
 
-# ...
+Data platform experiment built with RocksDB and Poco.
 
-```
-conan profile detect
-
+```shell
+# Dependencies
 conan install . -s build_type=Debug --build=missing
 
-cmake .. -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Release
+cd build
+
+# Generator
+cmake .. --preset conan-default -DCMAKE_BUILD_TYPE=Debug
+
+# Build
+cmake --build . --config Debug
+
+# Install
+cmake --install . --config Debug --prefix ../install
 ```

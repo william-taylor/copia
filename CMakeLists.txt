@@ -6,13 +6,16 @@ if (POLICY CMP0141)
   set(CMAKE_MSVC_DEBUG_INFORMATION_FORMAT "$<IF:$<AND:$<C_COMPILER_ID:MSVC>,$<CXX_COMPILER_ID:MSVC>>,$<$<CONFIG:Debug,RelWithDebInfo>:EditAndContinue>,$<$<CONFIG:Debug,RelWithDebInfo>:ProgramDatabase>>")
 endif()
 
-project ("data-platform")
+project ("copia")
 
 find_package(Poco REQUIRED)
 find_package(RocksDB REQUIRED)
 
-add_executable (datum "src/main.cpp")
+add_executable (copia "src/main.cpp")
 
-target_link_libraries(datum Poco::Poco RocksDB::rocksdb)
+target_link_libraries(copia Poco::Poco RocksDB::rocksdb)
 
-set_property(TARGET datum PROPERTY CXX_STANDARD 17)
+set_property(TARGET copia PROPERTY CXX_STANDARD 17)
+
+install(TARGETS copia DESTINATION bin)
+
