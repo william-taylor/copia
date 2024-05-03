@@ -16,6 +16,8 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - uses: turtlebrowser/get-conan@v1.2
+    - name: Profile
+      run: conan profile detect
     - name: Install
       run: conan install . -s build_type=${{env.BUILD_TYPE}} --build=missing
     - name: Generate
