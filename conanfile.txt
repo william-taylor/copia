@@ -1,0 +1,8 @@
+[requires]
+poco/1.13.3
+rocksdb/9.1.0
+[generators]
+CMakeDeps
+CMakeToolchain
+[layout]
+cmake_layout
