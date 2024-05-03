@@ -14,7 +14,8 @@ jobs:
     # See: https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/managing-complex-workflows#using-a-build-matrix
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4, turtlebrowser/get-conan@v1.2
+    - uses: actions/checkout@v4
+    - uses: turtlebrowser/get-conan@v1.2
     - name: Install
       run: turtlebrowser/get-conan@main
     - name: Generate
