@@ -1,4 +1,4 @@
-name: CMake Single Platform
+name: Continuous Build
 on:
   push:
     branches: [ "main" ]
